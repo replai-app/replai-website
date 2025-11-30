@@ -41,7 +41,7 @@ export default function Mission() {
   };
 
   return (
-    <section id="mission" className="min-h-screen bg-[#1C1C1C] relative">
+    <section id="mission" className="min-h-screen bg-[#1C1C1C] relative" style={{ zIndex: 1 }}>
       <div className="hidden xl:block">
         <div className="h-screen flex flex-col">
           {rows.map((row, index) => (

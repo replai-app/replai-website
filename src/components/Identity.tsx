@@ -72,7 +72,7 @@ export default function Identity() {
   };
 
   return (
-    <section id="identity" className="min-h-screen bg-[#1C1C1C] relative flex flex-col items-center justify-center py-12 md:py-16 lg:py-20">
+    <section id="identity" className="min-h-screen bg-[#1C1C1C] relative flex flex-col items-center justify-center py-12 md:py-16 lg:py-20" style={{ zIndex: 1 }}>
       <div className="absolute top-12 md:top-16 lg:top-20 left-1/2 transform -translate-x-1/2 z-40 bg-[#1C1C1C] px-4">
         <div
           className={`${spaceMono.variable} font-space-mono text-white/50 text-sm text-center`}

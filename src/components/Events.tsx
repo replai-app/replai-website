@@ -59,7 +59,7 @@ export default function Events() {
   ];
 
   return (
-    <section id="events" className="min-h-screen bg-[#1C1C1C] relative">
+    <section id="events" className="min-h-screen bg-[#1C1C1C] relative" style={{ zIndex: 1 }}>
       <div className="border-b border-white/20">
         <div className="px-6 md:px-8 lg:px-12 py-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
           <div
