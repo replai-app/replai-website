@@ -180,9 +180,9 @@ export default function Hero() {
           onSubmit={handleSubmit}
           className={`w-full max-w-full md:max-w-[60%] lg:max-w-[400px] fixed md:relative bottom-0 left-0 right-0 md:bottom-auto md:left-auto md:right-auto mb-0 md:mb-0 px-4 md:px-0 pb-4 md:pb-0 z-[60] md:z-auto`}
         >
-          <div className={`bg-white ${isSubmitted ? "rounded-lg" : "rounded-full"} px-4 md:px-6 py-3 md:py-4 flex items-center gap-3 shadow-[0_0_30px_rgba(225,125,24,0.3)] transition-all duration-300`}>
+          <div className={`bg-white ${isSubmitted ? "rounded-lg" : "rounded-full"} px-4 md:px-6 py-3 md:py-4 flex items-center gap-3 shadow-[0_0_30px_rgba(225,125,24,0.3)] transition-all duration-300 relative z-[60] md:z-auto`}>
             {isSubmitted ? (
-              <span className={`${spaceMono.variable} font-space-mono text-[#1C1C1C] uppercase text-sm w-full text-center`}>
+              <span className={`${spaceMono.variable} font-space-mono text-[#1C1C1C] uppercase text-sm w-full text-center relative z-[60] md:z-auto`}>
                 INVITE REQUESTED
               </span>
             ) : (
