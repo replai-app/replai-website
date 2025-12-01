@@ -66,8 +66,13 @@ export default function Hero() {
     setError(null);
 
     try {
+      const apiUrl = process.env.NEXT_PUBLIC_WAITLIST_API_URL;
+      if (!apiUrl) {
+        throw new Error("API URL not configured");
+      }
+
       const response = await fetch(
-        "https://api.freewaitlists.com/waitlists/cmilq2ywx013fls01weqxj0oc",
+        apiUrl,
         {
           method: "POST",
           headers: {
