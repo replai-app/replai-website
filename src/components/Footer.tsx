@@ -6,9 +6,9 @@ export default function Footer() {
   const handleReturnToTop = () => {
     const heroSection = document.getElementById("hero");
     if (heroSection) {
-      const input = heroSection.querySelector("input") as HTMLInputElement;
       heroSection.scrollIntoView({ behavior: "smooth" });
       setTimeout(() => {
+        const input = document.querySelector('input[type="email"]') as HTMLInputElement;
         input?.focus();
       }, 500);
     }
@@ -51,11 +51,11 @@ export default function Footer() {
               <div
                 className={`${spaceMono.variable} font-space-mono text-white text-[10px]`}
               >
-                <a href="#" className="hover:underline hover:decoration-[#E17D18] transition-all duration-0">
-                  TWITTER
+                <a href="https://x.com/replaiapp" target="_blank" rel="noopener noreferrer" className="hover:underline hover:decoration-[#E17D18] transition-all duration-0">
+                  X
                 </a>
                 {" / "}
-                <a href="#" className="hover:underline hover:decoration-[#E17D18] transition-all duration-0">
+                <a href="https://instagram.com/replai_world" target="_blank" rel="noopener noreferrer" className="hover:underline hover:decoration-[#E17D18] transition-all duration-0">
                   INSTAGRAM
                 </a>
               </div>
@@ -121,11 +121,11 @@ export default function Footer() {
               <div
                 className={`${spaceMono.variable} font-space-mono text-white text-xs`}
               >
-                <a href="#" className="hover:underline hover:decoration-[#E17D18] transition-all duration-0">
-                  TWITTER
+                <a href="https://x.com/replaiapp" target="_blank" rel="noopener noreferrer" className="hover:underline hover:decoration-[#E17D18] transition-all duration-0">
+                  X
                 </a>
                 {" / "}
-                <a href="#" className="hover:underline hover:decoration-[#E17D18] transition-all duration-0">
+                <a href="https://instagram.com/replai_world" target="_blank" rel="noopener noreferrer" className="hover:underline hover:decoration-[#E17D18] transition-all duration-0">
                   INSTAGRAM
                 </a>
               </div>
@@ -145,13 +145,17 @@ export default function Footer() {
 
           <div className="flex flex-col gap-2">
             <a
-              href="#"
+              href="https://x.com/replaiapp"
+              target="_blank"
+              rel="noopener noreferrer"
               className={`${spaceMono.variable} font-space-mono text-white text-sm hover:underline hover:decoration-[#E17D18] transition-all duration-0`}
             >
-              TWITTER
+              X
             </a>
             <a
-              href="#"
+              href="https://instagram.com/replai_world"
+              target="_blank"
+              rel="noopener noreferrer"
               className={`${spaceMono.variable} font-space-mono text-white text-sm hover:underline hover:decoration-[#E17D18] transition-all duration-0`}
             >
               INSTAGRAM

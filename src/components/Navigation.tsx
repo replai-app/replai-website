@@ -8,9 +8,9 @@ export default function Navigation() {
     e.preventDefault();
     const heroSection = document.getElementById("hero");
     if (heroSection) {
-      const input = heroSection.querySelector("input") as HTMLInputElement;
       heroSection.scrollIntoView({ behavior: "smooth" });
       setTimeout(() => {
+        const input = document.querySelector('input[type="email"]') as HTMLInputElement;
         input?.focus();
       }, 500);
     }
