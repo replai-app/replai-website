@@ -42,11 +42,12 @@ export default function Events() {
 
   const events = [
     {
-      date: "16.01.26",
-      event: "REPLAI: VOL 1",
+      date: "JANUARY 2026",
+      event: "VOL 1",
       location: "BREAD & BUTTER, SHOREDITCH",
-      status: "RSVP OPEN",
-      isActive: true,
+      status: "LOCKED",
+      isActive: false,
+      opacity: 0.3,
     },
     {
       date: "FEBRUARY 2026",
@@ -209,13 +210,6 @@ export default function Events() {
                   >
                     {event.date}
                   </span>
-                  {event.isActive && (
-                    <span
-                      className={`${spaceMono.variable} font-space-mono text-white/70 text-xs`}
-                    >
-                      20:00
-                    </span>
-                  )}
                 </div>
                 <div className="w-[60%] flex flex-col">
                   <h3
@@ -226,14 +220,14 @@ export default function Events() {
                   <span
                     className={`${editorialNewItalic.variable} font-editorial-new-italic text-white/70 text-xs italic`}
                   >
-                    {event.isActive ? "Bread & Butter, Shoreditch" : event.location}
+                    {event.location}
                   </span>
                 </div>
                 <div className="w-[20%] text-right">
                   <span
-                    className={`${spaceMono.variable} font-space-mono text-sm text-white border border-white/30 px-3 py-1 inline-block`}
+                    className={`${spaceMono.variable} font-space-mono text-sm text-white/50 border border-white/30 px-3 py-1 inline-block`}
                   >
-                    [ RSVP ]
+                    [ {event.status} ]
                   </span>
                 </div>
               </div>
@@ -243,67 +237,19 @@ export default function Events() {
 
         <div className="md:hidden">
           <div className="flex flex-col">
-            {events.map((event, index) => {
-              if (index === 0) {
-                return (
-                  <div
-                    key={index}
-                    className="border border-white mx-6 my-6 cursor-pointer overflow-hidden"
-                    onClick={() => handleRowClick(index)}
-                  >
-                    <div className="p-6">
-                      <div className="flex items-center justify-between mb-6">
-                        <span
-                          className={`${spaceMono.variable} font-space-mono text-white text-sm`}
-                        >
-                          {event.date}
-                        </span>
-                        <span
-                          className={`${spaceMono.variable} font-space-mono text-[#E17D18] text-sm`}
-                        >
-                          ● LIVE
-                        </span>
-                      </div>
-                      <div className="text-center mb-6">
-                        <h3
-                          className={`${neueMontrealBold.variable} font-neue-montreal-bold text-[32px] uppercase text-white`}
-                        >
-                          {event.event}
-                        </h3>
-                      </div>
-                      <div className="text-center mb-6">
-                        <span
-                          className={`${spaceMono.variable} font-space-mono text-white/70 text-sm`}
-                        >
-                          {event.location}
-                        </span>
-                      </div>
-                    </div>
-                    <div className="bg-[#E17D18] py-4 text-center">
-                      <span
-                        className={`${spaceMono.variable} font-space-mono text-black text-sm uppercase`}
-                      >
-                        TAP TO RSVP
-                      </span>
-                    </div>
-                  </div>
-                );
-              } else {
-                return (
-                  <div
-                    key={index}
-                    className="border-b border-white/30 h-10 flex items-center justify-center px-6"
-                    style={{ opacity: event.opacity }}
-                  >
-                    <span
-                      className={`${spaceMono.variable} font-space-mono text-white/50 text-xs`}
-                    >
-                      UPCOMING: {event.event} [ {event.status} ]
-                    </span>
-                  </div>
-                );
-              }
-            })}
+            {events.map((event, index) => (
+              <div
+                key={index}
+                className="border-b border-white/30 h-10 flex items-center justify-center px-6"
+                style={{ opacity: event.opacity }}
+              >
+                <span
+                  className={`${spaceMono.variable} font-space-mono text-white/50 text-xs`}
+                >
+                  UPCOMING: {event.event} [ {event.status} ]
+                </span>
+              </div>
+            ))}
           </div>
         </div>
       </div>
